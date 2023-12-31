@@ -29,8 +29,8 @@ const Nav = () => (
           </Link>
         </Menu.Item>
         <Menu.Item key="2">
-          <Link href="/test">
-            <a>Test</a>
+          <Link href="/about">
+            <a>About</a>
           </Link>
         </Menu.Item>
       </Menu>

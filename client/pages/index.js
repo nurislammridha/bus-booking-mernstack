@@ -35,7 +35,7 @@ const Home = () => {
 
   const checkButtonDisabled = val => {
     threeLengthArray.push(val);
-    if(threeLengthArray.length >= 3){
+    if (threeLengthArray.length >= 3) {
       setDisButton(false)
     }
   };
@@ -92,7 +92,7 @@ const Home = () => {
                 </label>
                 <Select
                   showSearch
-                  placeholder="eg- Dhangadhi"
+                  placeholder="eg- Bagerhat"
                   style={{ width: 200, marginRight: "1rem" }}
                   optionFilterProp="children"
                   onChange={onChangeFrom}
@@ -118,7 +118,7 @@ const Home = () => {
                 <Select
                   showSearch
                   style={{ width: 200, marginRight: "1rem" }}
-                  placeholder="eg- Kathmandu"
+                  placeholder="eg- Dhaka"
                   optionFilterProp="children"
                   onChange={onChangeTo}
                   name="endLocation"

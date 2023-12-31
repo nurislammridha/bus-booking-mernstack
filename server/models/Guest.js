@@ -19,8 +19,6 @@ const guestSchema = new mongoose.Schema({
     },
     phone: {
         type: Number,
-        max : 9999999999,
-        min: 9000000000,
         required: true
     }
 }, { timestamps: true });
