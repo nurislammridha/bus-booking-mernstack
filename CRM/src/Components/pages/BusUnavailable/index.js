@@ -36,7 +36,7 @@ class BusUnavailable extends Component {
               <img
                 className="busImage"
                 src={`${SERVER_ROUTE}/uploads/` + record.image}
-                alt="dhangaadi bus"
+                alt="bus booking"
               />
             </>
           );

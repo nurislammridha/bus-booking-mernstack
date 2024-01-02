@@ -9,12 +9,13 @@
 
 .busImage {
   height: 5rem;
+  width: 80px;
 }
 
 .submit-form {
   width: 100%;
 }
 
-.action{
+.action {
   display: flex;
 }

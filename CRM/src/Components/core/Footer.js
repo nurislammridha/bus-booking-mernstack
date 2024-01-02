@@ -7,7 +7,7 @@ const Footer = () => {
         <div>
           <div className="description-block border-right">
             <h5 className="description-header">
-              &copy; {new Date().getFullYear()} Dhan-gaadi
+              &copy; {new Date().getFullYear()} Bus-Booking
             </h5>
           </div>
         </div>

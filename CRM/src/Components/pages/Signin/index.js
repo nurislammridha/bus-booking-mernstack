@@ -6,7 +6,7 @@ import {
   authenticate,
   isAuthenticated
 } from "../../../Utils/Requests/Auth";
-
+import "../../../styles/signin.css"
 const Login = () => {
   const [state, setState] = useState({
     email: "sadmin@gmail.com",

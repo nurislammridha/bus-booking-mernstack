@@ -131,9 +131,8 @@ class MyBookings extends Component {
               <button
                 data-toggle="modal"
                 data-target="#update-user-modal"
-                className={`btn btn-${
-                  record.verification === "verified" ? "warning" : "success"
-                } btn-sm`}
+                className={`btn btn-${record.verification === "verified" ? "warning" : "success"
+                  } btn-sm`}
                 onClick={this.toggleVerify(record._id, record.verification)}
                 style={{
                   marginRight: "5px",
@@ -141,9 +140,8 @@ class MyBookings extends Component {
                 }}
               >
                 <i
-                  className={`fa fa-${
-                    record.verification === "verified" ? "times" : "check"
-                  }`}
+                  className={`fa fa-${record.verification === "verified" ? "times" : "check"
+                    }`}
                 ></i>
               </button>
               <button
@@ -262,15 +260,16 @@ class MyBookings extends Component {
     const resp = await getAllBookings().catch(err => {
       this.setState({ error: err.response.data.error, isLoading: false });
     });
-
+    console.log('resp', resp)
     if (resp && resp.status === 200) {
       let counter = 1;
+      let arr = []
       resp.data.map(booking => {
         const client = booking.guest
           ? booking.guest
           : booking.user
-          ? booking.user
-          : booking.self;
+            ? booking.user
+            : booking.self;
         booking.bookedDate = moment(booking.createdAt).format("MMMM Do, YYYY");
         booking.journeyDate = moment(booking.bus.journeyDate).format(
           "MMMM Do, YYYY"
@@ -287,6 +286,7 @@ class MyBookings extends Component {
         booking.busName = booking.bus.name;
         return booking;
       });
+      console.log('resp.data', resp.data)
       this.setState({ bookings: resp.data, isLoading: false });
     }
   };

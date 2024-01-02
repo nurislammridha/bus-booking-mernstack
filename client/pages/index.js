@@ -85,7 +85,7 @@ const Home = () => {
 
           <div className="row">
             <div className="input-background">
-              <h1 className="tag-line">Get Seat Go</h1>
+              <h1 className="tag-line">Book Your Seat And Go</h1>
               <div className="route-form">
                 <label htmlFor="">
                   <h4 className="color-white">From: </h4>

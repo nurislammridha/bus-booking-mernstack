@@ -9,7 +9,7 @@ import moment from "moment";
 import Swal from "sweetalert2";
 import { SERVER_ROUTE } from "../../../Utils/config";
 import Loading from "../../core/Loading";
-
+import "../../../styles/bus.css"
 class BusAvailable extends Component {
   constructor(props) {
     super(props);

@@ -2,7 +2,7 @@
   "name": "bus-booking",
   "version": "1.0.0",
   "main": "server.js",
-  "repository": "https://github.com/ujjalacharya/dhan-gaadi.git",
+  "repository": "",
   "author": "Nurislam Mridha <mridha851@gmail.com>",
   "license": "MIT",
   "scripts": {
