@@ -28,17 +28,17 @@ class SingleCard extends React.Component {
       this.setState({ loading: false, visible: false });
       Router.push({
         pathname: "/details",
-        query: {info}
+        query: { info }
       });
     }, 1000);
   };
 
   encryptInfo = seat => {
-    const {startLocation, endLocation, fare, journeyDate, travel={}, slug} = this.props.bus;
+    const { startLocation, endLocation, fare, journeyDate, travel = {}, slug } = this.props.bus;
     let start = startLocation.name;
     let end = endLocation.name;
     let travelName = travel.name;
-    const info = {start, end, fare, journeyDate, travelName, seat, slug}
+    const info = { start, end, fare, journeyDate, travelName, seat, slug }
     const resp = enc(info);
     this.handleOk(resp)
   }
@@ -50,15 +50,15 @@ class SingleCard extends React.Component {
   };
 
   seatColorMeaning = () => {
-    return(
+    return (
       <>
-        <div style={{display: 'flex', alignItems: 'start', flexDirection: 'row-reverse'}}>
+        <div style={{ display: 'flex', alignItems: 'start', flexDirection: 'row-reverse' }}>
           <p>Available</p>
-          <Button type="primary" style={{margin: '0 1rem'}}></Button>
+          <Button type="primary" style={{ margin: '0 1rem' }}></Button>
           <p>Booked</p>
-          <Button style={{backgroundColor: "rgb(67, 67, 67)", margin: '0 1rem'}}></Button>
+          <Button style={{ backgroundColor: "rgb(67, 67, 67)", margin: '0 1rem' }}></Button>
           <p>Sold</p>
-          <Button type="danger" style={{margin: '0 1rem'}}></Button>
+          <Button type="danger" style={{ margin: '0 1rem' }}></Button>
         </div>
       </>
     )
@@ -73,12 +73,12 @@ class SingleCard extends React.Component {
         this.seatColorMeaning()
       ]}
       width={1000}
-      >
+    >
       <SeatDetails
         sold={this.props.bus.soldSeat}
-        setSold={() => {}}
+        setSold={() => { }}
         booked={this.props.bus.bookedSeat}
-        setBooked={() => {}}
+        setBooked={() => { }}
         slug={"ss"}
         handleUserBooked={this.handleUserBooked}
         numberOfSeats={this.props.bus.numberOfSeats}
@@ -87,7 +87,7 @@ class SingleCard extends React.Component {
   );
 
   render() {
-    const { bus } = this.props;
+    const { bus } = this.props || {};
     return (
       <>
         <Card
@@ -105,7 +105,7 @@ class SingleCard extends React.Component {
             </Col>
             <Col span={1}></Col>
             <Col span={4}>
-              <p>{bus.travel ? bus.travel.name: null}</p>
+              <p>{bus.travel ? bus.travel.name : null}</p>
             </Col>
             <Col span={4}>
               <p>{bus.type}</p>
