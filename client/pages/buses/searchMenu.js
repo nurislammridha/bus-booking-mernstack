@@ -23,7 +23,7 @@ function disabledDate(current) {
   return current && current < moment().endOf("day");
 }
 
-const SearchMenu = ({ buses, info }) => {
+const SearchMenu = ({ buses, info = {} }) => {
   const [locations, setLocations] = useState([]);
   const [formData, setFormData] = useState({
     startLocation: info.startLocation,
