@@ -1,4 +1,4 @@
-// import SingleCard from "./singleCard";
+import SingleCard from "./singleCard";
 import { Row, Col } from "antd";
 import { useCallback } from "react";
 // import NepaliDate from "ad-bs-converter";
@@ -55,8 +55,8 @@ const Cards = ({ buses = [] }) => {
               <h3>Fare</h3>
             </Col>
           </Row>
-          {/* {buses.length > 0 &&
-            buses.map((bus) => <SingleCard key={bus._id} bus={bus} />)} */}
+          {buses.length > 0 &&
+            buses.map((bus) => <SingleCard key={bus._id} bus={bus} />)}
         </div>
       </div>
     );
